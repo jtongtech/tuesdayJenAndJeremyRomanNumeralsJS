@@ -9,34 +9,34 @@ function resetResult() {
     }
 }
 
-function changeNumber(input_number){
+function changeNumber(input_number) {
     while (input_number > 0){
-        if(input_number >= 1000){
+        if (input_number >= 1000) {
             console.log(input_number);
             input_number = input_number - 1000;
             result += "M";
             console.log(input_number);
-        } if (input_number >= 500){
+        } if (input_number >= 500) {
             console.log(input_number);
             input_number = input_number - 500;
             result += "D";
             console.log(input_number);
-        } if (input_number >= 100){
+        } if (input_number >= 100) {
             console.log(input_number);
             input_number = input_number - 100;
             result += "C";
             console.log(input_number);
-        } if (input_number >= 10){
+        } if (input_number >= 10) {
             console.log(input_number);
             input_number = input_number - 10;
             result += "X";
             console.log(input_number);
-        } if (input_number >= 5){
+        } if (input_number >= 5) {
             console.log(input_number);
             input_number = input_number - 5;
             result += "V";
             console.log(input_number);
-        } if (input_number < 5){
+        } if (input_number < 5 && input_number != 0) {
             console.log(input_number);
             input_number = input_number - 1;
             result += "I";
@@ -54,6 +54,7 @@ console.log("Hello World")
 
 
 function mEqualsOneThousand() {
+    resetResult();
     changeNumber(1000);
     console.log(result);
     if (result == "M"){
@@ -66,6 +67,7 @@ function mEqualsOneThousand() {
 mEqualsOneThousand();
 
 function dEqualsFiveHundred() {
+    resetResult();
     changeNumber(500);
     console.log(result);
     if (result == "D"){
@@ -78,6 +80,7 @@ function dEqualsFiveHundred() {
 dEqualsFiveHundred();
 
 function cEqualsOneHundred() {
+    resetResult();
     changeNumber(100);
     console.log(result);
     if (result == "C"){
@@ -90,6 +93,7 @@ function cEqualsOneHundred() {
 cEqualsOneHundred();
 
 function xEqualsTen() {
+    resetResult();
     changeNumber(10);
     console.log(result);
     if (result == "X"){
@@ -102,6 +106,7 @@ function xEqualsTen() {
 xEqualsTen();
 
 function vEqualsFive() {
+    resetResult();
     changeNumber(5);
     console.log(result);
     if (result == "V"){
@@ -114,6 +119,7 @@ function vEqualsFive() {
 vEqualsFive();
 
 function iEqualsOne() {
+    resetResult();
     changeNumber(1);
     console.log(result);
     if (result == "I"){
@@ -126,6 +132,7 @@ function iEqualsOne() {
 iEqualsOne();
 
 function miEqualsOneThousandandOne() {
+    resetResult();
     changeNumber(1001);
     console.log(result);
     if (result == "MI"){
@@ -136,6 +143,19 @@ function miEqualsOneThousandandOne() {
 }
 
 miEqualsOneThousandandOne();
+
+function miiEqualsOneThousandandTwo() {
+    resetResult();
+    changeNumber(1002);
+    console.log(result);
+    if (result == "MII"){
+    console.log("miiEqualsOneThousandandTwo passed");
+    }else{ 
+        (console.log("miiEqualsOneThousandandTwo failed"));
+    }resetResult();
+}
+
+miiEqualsOneThousandandTwo();
 
 
 
