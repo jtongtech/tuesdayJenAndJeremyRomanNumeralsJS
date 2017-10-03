@@ -36,7 +36,7 @@ function changeNumber(input_number) {
             input_number = input_number - 5;
             result += "V";
             console.log(input_number);
-        } if (input_number < 5 && input_number != 0) {
+        } while (input_number < 5 && input_number != 0) {
             console.log(input_number);
             input_number = input_number - 1;
             result += "I";
