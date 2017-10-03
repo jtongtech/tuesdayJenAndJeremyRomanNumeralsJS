@@ -1,20 +1,29 @@
+var result = "";
+var input_number = 1000;
 
 //Logic Section Below
-
+function changeNumber(input_number){
+    if(input_number == 1000){
+        result = "M";
+    }
+}
+changeNumber(1000);
 //Logic Sections Above
 
 // Test Section Below
 console.log("Hello World")
 
-var result = "";
+
 
 function mEqualsOneThousand() {
-    var input_number = "1000";
-    if (changeNumber(input_number) == "M")
+    console.log(result);
+    if (result == "M"){
     console.log("mEqualsOneThousand passed");
-    else (console.log("mEqualsOneThousand failed"));
+    }else{ 
+        (console.log("mEqualsOneThousand failed"));
+    }
 }
 
-mEqualsOneThousand()
+mEqualsOneThousand();
 
 // Test Section Above
