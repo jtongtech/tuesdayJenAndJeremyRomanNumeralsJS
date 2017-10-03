@@ -9,24 +9,36 @@ function resetResult() {
     }
 }
 
+// function needsSubtraction(input_number) {
+//     if (input_number < 1000 && input_number > 899) {
+//         input_number = input_number - 900;
+//         result += "CM"
+//     }
+// }
+
+// III  IV V VI VII VIII IX X 
+
 function changeNumber(input_number) {
     while (input_number > 0){
-        if (input_number >= 1000) {
+        while (input_number >= 1000) {
             console.log(input_number);
             input_number = input_number - 1000;
             result += "M";
             console.log(input_number);
+        }if (input_number < 1000 && input_number > 899) {
+            input_number = input_number - 900;
+            result += "CM";
         } if (input_number >= 500) {
             console.log(input_number);
             input_number = input_number - 500;
             result += "D";
             console.log(input_number);
-        } if (input_number >= 100) {
+        } while (input_number >= 100) {
             console.log(input_number);
             input_number = input_number - 100;
             result += "C";
             console.log(input_number);
-        } if (input_number >= 10) {
+        } while (input_number >= 10) {
             console.log(input_number);
             input_number = input_number - 10;
             result += "X";
@@ -169,6 +181,58 @@ function mviEqualsOneThousandandSix() {
 }
 
 mviEqualsOneThousandandSix();
+
+function xxEqualsTwenty() {
+    resetResult();
+    changeNumber(20);
+    console.log(result);
+    if (result == "XX"){
+    console.log("xxEqualsTwenty passed");
+    }else{ 
+        (console.log("xxEqualsTwenty failed"));
+    }resetResult();
+}
+
+xxEqualsTwenty();
+
+function mmxxiiEqualsTwoThousandTwentyTwo() {
+    resetResult();
+    changeNumber(2022);
+    console.log(result);
+    if (result == "MMXXII"){
+    console.log("mmxxiiEqualsTwoThousandTwentyTwo passed");
+    }else{ 
+        (console.log("mmxxiiEqualsTwoThousandTwentyTwo failed"));
+    }resetResult();
+}
+
+mmxxiiEqualsTwoThousandTwentyTwo();
+
+function cmEqualsNineHundred() {
+    resetResult();
+    changeNumber(900);
+    console.log(result);
+    if (result == "CM"){
+    console.log("cmEqualsNineHundred passed");
+    }else{ 
+        (console.log("cmEqualsNineHundred failed"));
+    }resetResult();
+}
+
+cmEqualsNineHundred();
+
+function cmxcixEqualsNineHundredNinetyNine() {
+    resetResult();
+    changeNumber(999);
+    console.log(result);
+    if (result == "CMXCIX"){
+    console.log("cmxcixEqualsNineHundredNinetyNine passed");
+    }else{ 
+        (console.log("cmxcixEqualsNineHundredNinetyNine failed"));
+    }resetResult();
+}
+
+cmxcixEqualsNineHundredNinetyNine();
 
 
 
