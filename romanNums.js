@@ -157,6 +157,19 @@ function miiEqualsOneThousandandTwo() {
 
 miiEqualsOneThousandandTwo();
 
+function mviEqualsOneThousandandSix() {
+    resetResult();
+    changeNumber(1006);
+    console.log(result);
+    if (result == "MVI"){
+    console.log("mviEqualsOneThousandandSix passed");
+    }else{ 
+        (console.log("mviEqualsOneThousandandSix failed"));
+    }resetResult();
+}
+
+mviEqualsOneThousandandSix();
+
 
 
 // Test Section Above
